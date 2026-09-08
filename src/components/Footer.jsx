@@ -1,5 +1,5 @@
 const GITHUB_URL = 'https://github.com/awesomenull-dev/GoldenNugget'
-const DISCORD_URL = 'https://discord.gg/RwbtH7pW5e'
+const DISCORD_URL = 'https://discord.gg/Rm6r4zeE3y'
 
 export default function Footer() {
   return (

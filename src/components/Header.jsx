@@ -1,6 +1,6 @@
 import { Link, NavLink } from 'react-router-dom'
 
-const DISCORD_URL = 'https://discord.gg/RwbtH7pW5e'
+const DISCORD_URL = 'https://discord.gg/Rm6r4zeE3y'
 const GITHUB_URL = 'https://github.com/awesomenull-dev/GoldenNugget'
 
 function GithubIcon() {
@@ -39,6 +39,9 @@ export default function Header() {
           </NavLink>
           <NavLink to="/roadmap" className="nav-link">
             Roadmap
+          </NavLink>
+          <NavLink to="/transparency" className="nav-link">
+            Transparency
           </NavLink>
         </nav>
 
