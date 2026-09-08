@@ -594,6 +594,18 @@ code {
   border: 1px solid var(--accent-border);
 }
 
+.phase-status.done {
+  color: var(--success);
+  background: rgba(63, 185, 80, 0.12);
+  border: 1px solid rgba(63, 185, 80, 0.4);
+}
+
+.phase-status.planned {
+  color: var(--text-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
 .phase-status.refactor {
   color: var(--link);
   background: rgba(68, 147, 248, 0.12);

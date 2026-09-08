@@ -7,10 +7,6 @@ function PhaseBadge({ status, label }) {
 }
 
 function RoadmapPhase({ phase }) {
-  const numbered = phase.groups
-    ? phase.groups.flatMap((g) => g.items)
-    : null
-
   return (
     <section className="roadmap-phase">
       <div className="roadmap-phase-header">
@@ -19,23 +15,18 @@ function RoadmapPhase({ phase }) {
       </div>
       <p>{renderInline(phase.intro)}</p>
 
-      {phase.groups ? (
-        phase.groups.map((group) => (
-          <div className="roadmap-group" key={group.title}>
-            <div className="roadmap-group-title">{group.title}</div>
-            <ul className="roadmap-list">
-              {group.items.map((item) => {
-                const index = numbered.indexOf(item) + 1
-                return (
-                  <li className="roadmap-item" key={item}>
-                    <span className="roadmap-item-number">{index}</span>
-                    <span>{renderInline(item)}</span>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
-        ))
+      {phase.items && phase.listLabel ? (
+        <div className="roadmap-group">
+          <div className="roadmap-group-title">{phase.listLabel}</div>
+          <ul className="roadmap-list">
+            {phase.items.map((item) => (
+              <li className="roadmap-item" key={item}>
+                <span className="roadmap-item-bullet" />
+                <span>{renderInline(item)}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       ) : phase.items ? (
         <div className="roadmap-group">
           <ul className="roadmap-list">
@@ -62,8 +53,8 @@ export default function Roadmap() {
           </div>
           <h1>Roadmap</h1>
           <p>
-            Short-term plan for GoldenNugget. Verified against{' '}
-            <code>docs/ARCHITECTURE.md</code> before large changes.
+            GoldenNugget's plan for the next versions — from 9.3.3 to 9.4.2.
+            What each one means for you.
           </p>
         </div>
       </div>
@@ -75,13 +66,11 @@ export default function Roadmap() {
 
         <div className="roadmap-note">
           <span className="note-icon" aria-hidden="true">
-            ⚠
+            ℹ
           </span>
           <span>
-            The 9.4 refactor is a housekeeping pass — it prepares the codebase
-            for feature work and introduces no user-visible changes (unless they
-            fall out naturally). Verify big changes against{' '}
-            <code>docs/ARCHITECTURE.md</code> before proceeding.
+            Roadmap is a plan, not a promise — items can shift between versions
+            if needed.
           </span>
         </div>
       </div>
