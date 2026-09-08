@@ -21,7 +21,16 @@ export default function Footer() {
           </a>
         </div>
         <div className="footer-copy">
-          GoldenNugget — not affiliated with Apple. Use at your own risk.
+          Website created by the{' '}
+          <a
+            href="https://github.com/EzyLabsHQ"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: 'var(--accent)' }}
+          >
+            EzyLabsHQ
+          </a>{' '}
+          team. GoldenNugget is not affiliated with Apple. Use at your own risk.
         </div>
       </div>
     </footer>
