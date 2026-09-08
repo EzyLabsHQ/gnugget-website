@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import NuggetIcon from '../components/NuggetIcon.jsx'
 
 const GITHUB_URL = 'https://github.com/awesomenull-dev/GoldenNugget'
 const DISCORD_URL = 'https://discord.gg/RwbtH7pW5e'
@@ -99,7 +98,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <NuggetIcon size={150} className="hero-nugget" />
+          <img src="/nugget.png" alt="GoldenNugget logo" className="hero-nugget" />
         </div>
       </section>
 

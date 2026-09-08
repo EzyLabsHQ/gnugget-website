@@ -1,5 +1,4 @@
 import { Link, NavLink } from 'react-router-dom'
-import NuggetIcon from './NuggetIcon.jsx'
 
 const DISCORD_URL = 'https://discord.gg/RwbtH7pW5e'
 const GITHUB_URL = 'https://github.com/awesomenull-dev/GoldenNugget'
@@ -25,7 +24,7 @@ export default function Header() {
     <header className="header">
       <div className="container header-inner">
         <Link to="/" className="brand">
-          <NuggetIcon size={28} />
+          <img src="/nugget.png" alt="GoldenNugget logo" />
           <span className="brand-text">
             Golden<span className="gold">Nugget</span>
           </span>
