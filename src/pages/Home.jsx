@@ -94,7 +94,7 @@ export default function Home() {
                 <span className="meta-icon">⑂</span> Fork of Nugget
               </span>
               <span className="meta-item">
-                <span className="meta-icon">∞</span> Open source (MIT)
+                <span className="meta-icon">∞</span> Open source (AGPL-3.0)
               </span>
             </div>
           </div>

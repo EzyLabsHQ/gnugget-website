@@ -17,7 +17,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
           >
-            License
+            License (AGPL-3.0)
           </a>
         </div>
         <div className="footer-copy">
