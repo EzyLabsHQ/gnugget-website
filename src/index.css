@@ -227,6 +227,28 @@ code {
   height: 16px;
 }
 
+.btn-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: 2px;
+  padding: 1px 7px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.6;
+}
+
+.btn-badge svg {
+  width: 12px;
+  height: 12px;
+  color: var(--accent);
+}
+
 .btn-gold {
   background: var(--accent);
   border-color: var(--accent);

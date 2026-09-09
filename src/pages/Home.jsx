@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useGitHubStars, formatStars } from '../hooks/useGitHubStars.js'
 
 const GITHUB_URL = 'https://github.com/awesomenull-dev/GoldenNugget'
 const DISCORD_URL = 'https://discord.gg/Rm6r4zeE3y'
@@ -61,6 +62,7 @@ const facts = [
 ]
 
 export default function Home() {
+  const { stars } = useGitHubStars()
   return (
     <>
       <section className="hero">
@@ -88,7 +90,7 @@ export default function Home() {
             </div>
             <div className="hero-meta">
               <span className="meta-item">
-                <span className="meta-icon">★</span> 114 stars on GitHub
+                <span className="meta-icon">★</span> {formatStars(stars)} stars on GitHub
               </span>
               <span className="meta-item">
                 <span className="meta-icon">⑂</span> Fork of Nugget

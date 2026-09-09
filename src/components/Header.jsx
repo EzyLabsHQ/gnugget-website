@@ -1,4 +1,5 @@
 import { Link, NavLink } from 'react-router-dom'
+import { useGitHubStars, formatStars } from '../hooks/useGitHubStars.js'
 
 const DISCORD_URL = 'https://discord.gg/Rm6r4zeE3y'
 const GITHUB_URL = 'https://github.com/awesomenull-dev/GoldenNugget'
@@ -19,7 +20,16 @@ function DiscordIcon() {
   )
 }
 
+function StarIcon() {
+  return (
+    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+      <path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.751.751 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25Z" />
+    </svg>
+  )
+}
+
 export default function Header() {
+  const { stars } = useGitHubStars()
   return (
     <header className="header">
       <div className="container header-inner">
@@ -49,6 +59,10 @@ export default function Header() {
           <a className="btn" href={GITHUB_URL} target="_blank" rel="noreferrer">
             <GithubIcon />
             GitHub
+            <span className="btn-badge">
+              <StarIcon />
+              {formatStars(stars)}
+            </span>
           </a>
           <a className="btn btn-gold" href={DISCORD_URL} target="_blank" rel="noreferrer">
             <DiscordIcon />
