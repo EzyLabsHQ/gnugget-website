@@ -100,7 +100,7 @@ export default function Home() {
               </span>
             </div>
           </div>
-          <img src="/nugget.png" alt="GoldenNugget logo" className="hero-nugget" />
+          <img src="./nugget.png" alt="GoldenNugget logo" className="hero-nugget" />
         </div>
       </section>
 

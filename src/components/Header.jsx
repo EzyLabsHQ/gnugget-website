@@ -34,7 +34,7 @@ export default function Header() {
     <header className="header">
       <div className="container header-inner">
         <Link to="/" className="brand">
-          <img src="/nugget.png" alt="GoldenNugget logo" />
+          <img src="./nugget.png" alt="GoldenNugget logo" />
           <span className="brand-text">
             Golden<span className="gold">Nugget</span>
           </span>
